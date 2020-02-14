@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Hello Bulma!</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css">
+    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="//code.jquery.com/jquery.min.js"></script>
+    <script>
+        $("textarea.autosize").on('keydown keyup', function () {
+            $(this).height(1).height( $(this).prop('scrollHeight')+12 );
+        });
+    </script>
+    <style>
+        textarea.autosize { min-height: 50px; }
+        textarea:focus{outline: none;};
+        .wrap{
+            width: 1440px;
+        }
+
+        .content_wrap_writing{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 40px auto 50px auto;
+
+            width: 80%;
+            height: 1188px;
+
+            border: black;
+            /*border-style: solid;*/
+            /*border-color: black;*/
+            /*border-width: 10px;*/
+            /*border-radius: 1px;*/
+
+            /*box-shadow: 10px 10px 5px darkgrey;*/
+        }
+
+    </style>
+</head>
+<body>
+<section class="section">
+    <div class="container">
+        <!-- NavBar-->
+        <div>
+            <nav class="navbar" role="navigation" aria-label="main navigation">
+                <div class="navbar-brand">
+                    <a class="navbar-item" href="https://bulma.io">
+                        <img src="https://bulma.io/images/bulma-logo.png" alt="Bulma: Free, open source, and modern CSS framework based on Flexbox" width="112" height="28">
+                    </a>
+
+                    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+                        <span aria-hidden="true"></span>
+                        <span aria-hidden="true"></span>
+                        <span aria-hidden="true"></span>
+                    </a>
+                </div>
+            </nav>
+        </div>
+
+        <!--breadcrumb-->
+        <nav class="breadcrumb has-succeeds-separator is-right" aria-label="breadcrumbs">
+            <ul>
+                <li><a href="#">PortfoliYou</a></li>
+                <li><a href="#">Daily Logs</a></li>
+                <li><a href="#">Workout</a></li>
+                <li class="is-active"><a href="#" aria-current="page">Feb 14th 2020</a></li>
+            </ul>
+        </nav>
+        <section class="wrap">
+            <div class="content_wrap_writing" style="border: 1px solid; padding: 30px; box-shadow: 5px 5px 3px darkgrey; margin:20px auto 30px auto;">
+        <textarea placeholder="제목을 입력하세요" style="height: 70px; width: 90%; font-size:45px; border:0; overflow-y:hidden;background:clear;" contenteditable="true"></textarea>
+                <hr>
+
+
+                
+                <div>
+        <textarea style="height: 800px; width: 100%; font-size:20px; border:0;overflow:visible; background: clear;" class="autosize" contenteditable="true">내용을 입력하세요
+        </textarea>
+                </div>
+            </div>
+
+        </section>
+        <!--footer-->
+        <footer class="footer">
+            <div class="content has-text-centered">
+                <p>
+                    <strong>Bulma</strong> by <a href="https://jgthms.com">Jeremy Thomas</a>. The source code is licensed
+                    <a href="http://opensource.org/licenses/mit-license.php">MIT</a>. The website content
+                    is licensed <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY NC SA 4.0</a>.
+                </p>
+            </div>
+        </footer>
+    </div>
+</section>
+</body>
+</html>
